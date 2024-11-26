@@ -11,6 +11,8 @@
 
 ----// Configuation
 local PartTag = "Kick Parts"
+local KickMessage = "Bozo detected"
+local MiniumRank = 1
 
 --// Services
 local CollectionService = game:GetService("CollectionService")
@@ -32,8 +34,8 @@ local function Touched(Limb)
 	
 	--// Admin check
 	local RankId = HdAdmin:GetRank(Player)
-	if RankId <= 0 then
-		Player:Kick("Bozo")
+	if RankId < MiniumRank then
+		Player:Kick(KickMessage)
 	end
 end
 
