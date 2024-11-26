@@ -23,8 +23,8 @@ local DataStoreService = game:GetService("DataStoreService")
 local CollectionService = game:GetService("CollectionService")
 
 --// Modules
-local Modules = script.Parent.Modules
-local Leaderstats = require(Modules.Leaderstats)
+--local Modules = script.Parent.Modules
+--local Leaderstats = require(Modules.Leaderstats)
 
 --// Data tables
 local Stages = {}
@@ -37,7 +37,7 @@ end
 
 local function SetStage(Player: Player, Stage: number)
 	Stages[Player] = Stage or 0
-	Leaderstats:SetValue(Player, "Stage", Stage)
+	--Leaderstats:SetValue(Player, "Stage", Stage)
 end
 local function GetStage(Player: Player): number
 	return Stages[Player] or 0
